@@ -31,4 +31,9 @@ class TaxCalculatorSpec extends FlatSpec {
   "Inputting 1000000 with longer arrays" should "return 9900" in {
     assert(taxCalc.calculateTax(1000000, Array(1000, 10000, 40000, 60000, 70000, 500000, 700000), Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7)) == 561900)
   }
+
+
+  "Inputting 0.1 with simple arrays" should "return 3000" in {
+    assert(taxCalc.overallTaxRateFindIncome(0.1, Array(1000,2000),Array(0.1,0.2)) == "The income you are looking for is 3000")
+  }
 }
