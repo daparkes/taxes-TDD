@@ -6,5 +6,6 @@ object Main extends App {
   //val funnel = new FunnelWord
  // println(funnel.findFunnelList("princesses"))
   val funnel = new FunnelWord
-  funnel.funnelWord("princesses")
+  println(funnel.determineIfWord("princess"))
+//  funnel.funnelWord("princesses")
 }

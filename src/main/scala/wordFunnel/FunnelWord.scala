@@ -9,26 +9,37 @@ class FunnelWord {
     bufferedSource.getLines
   }
 
-  def funnelWord(startingWord: String): Int = {
+//  def funnelWord(startingWord: String): Int = {
+//    val words = readFile
+//    var tempWord = startingWord
+//    var count = 0
+//    while (tempWord.length > 0) {
+//      var wordSB = new StringBuilder(tempWord)
+//      wordSB = wordSB.deleteCharAt(i)
+//      println(wordSB.toString)
+//      for (word <- words) {
+//        if (word == wordSB.toString) {
+//          println(word)
+//          count += 1
+//        }
+//      }
+//      tempWord = wordSB.toString
+//    }
+
+
+
+//    count
+//  }
+
+  def determineIfWord(word: String): Boolean = {
     val words = readFile
-    var tempWord = startingWord
-    var count = 0
-    while (tempWord.length > 0) {
-      var wordSB = new StringBuilder(tempWord)
-      wordSB = wordSB.deleteCharAt(i)
-      println(wordSB.toString)
-      for (word <- words) {
-        if (word == wordSB.toString) {
-          println(word)
-          count += 1
-        }
+    var isWord = false
+    for (line <- words) {
+      if (line == word) {
+        isWord = true
       }
-      tempWord = wordSB.toString
     }
-
-
-
-    count
+    isWord
   }
 
   def findFunnelList(startingWord: String): List[String] = {
