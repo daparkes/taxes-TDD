@@ -1,8 +1,9 @@
 package wordFunnel
 
+import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
-object funnelWord {
+class FunnelWord {
   def readFile: Iterator[String] = {
     val bufferedSource = Source.fromFile("enable1.txt")
     bufferedSource.getLines
@@ -25,5 +26,19 @@ object funnelWord {
       }
     }
     count
+  }
+
+  def findFunnelList(startingWord: String): List[String] = {
+    val words = readFile
+    var tempListBuffer = new ListBuffer[String]
+    var wordSB = new StringBuilder(startingWord)
+    for (i <- 0 until startingWord.length) {
+      var wordInList = false
+//      words foreach  {
+//        if (line == wordSB.deleteCharAt(i).toString)
+      }
+    }
+    println(tempListBuffer)
+    tempListBuffer.toList
   }
 }
