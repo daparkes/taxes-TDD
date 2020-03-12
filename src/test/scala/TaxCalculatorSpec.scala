@@ -21,6 +21,6 @@ class TaxCalculatorSpec extends FlatSpec {
   }
 
   "Inputting 5000 with arrays of more than 1 value" should "return 500" in {
-    assert(taxCalc.calculateTax(5000, Array(0, 1000, 4000), Array(10, 20)) == 500)
+    assert(taxCalc.calculateTax(5000, Array(1000, 4000), Array(10, 20)) == 500)
   }
 }
