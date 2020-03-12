@@ -13,7 +13,7 @@ class FunnelWord {
     val words = readFile
     var tempWord = startingWord
     var count = 0
-    for (i <- 0 until tempWord.length) {
+    while (tempWord.length > 0) {
       var wordSB = new StringBuilder(tempWord)
       wordSB = wordSB.deleteCharAt(i)
       println(wordSB.toString)
@@ -21,10 +21,13 @@ class FunnelWord {
         if (word == wordSB.toString) {
           println(word)
           count += 1
-          tempWord = wordSB.toString
         }
       }
+      tempWord = wordSB.toString
     }
+
+
+
     count
   }
 
