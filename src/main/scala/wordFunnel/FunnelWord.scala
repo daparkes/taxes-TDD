@@ -48,7 +48,7 @@ class FunnelWord {
     var wordSB = new StringBuilder(startingWord)
     while (wordSB > 0) {
       for (i <- 0 until wordSB.toString.length) {
-        if(determineIfWord(wordSB.deleteCharAt(i))) {
+        if(determineIfWord(wordSB.deleteCharAt(i).toString)) {
           tempListBuffer += wordSB.deleteCharAt(i)
         }
       }
