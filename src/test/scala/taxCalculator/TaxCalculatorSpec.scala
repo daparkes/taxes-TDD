@@ -1,3 +1,5 @@
+package taxCalculator
+
 import org.scalatest._
 
 class TaxCalculatorSpec extends FlatSpec {
