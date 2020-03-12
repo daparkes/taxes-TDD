@@ -1,3 +1,5 @@
+package taxCalculator
+
 object Main extends App {
 
   val taxCalc = new TaxCalculator
