@@ -42,19 +42,17 @@ class FunnelWord {
     isWord
   }
 
-  def findFunnelList(startingWord: String): List[String] = {
+  def findFunnelList(startingWord: String): (List[String], Int) = {
     val words = readFile
     var tempListBuffer = new ListBuffer[String]
     var wordSB = new StringBuilder(startingWord)
-    for (i <- 0 until startingWord.length) {
-      var wordInList = false
-      words foreach(word =>  {
-        if (word == wordSB.deleteCharAt(i).toString) {
-          tempListBuffer += wordSB.deleteCharAt(i).toString
+    while (wordSB > 0) {
+      for (i <- 0 until wordSB.toString.length) {
+        if(determineIfWord(wordSB.deleteCharAt(i))) {
+          tempListBuffer += wordSB.deleteCharAt(i)
         }
-      })
+      }
     }
-    println(tempListBuffer)
-    tempListBuffer.toList
+
   }
 }
