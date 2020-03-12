@@ -7,7 +7,7 @@ class TaxCalculatorSpec extends FlatSpec {
   val taxCalc = new TaxCalculator
 
   "Inputting 0 as income with first set of test arrays" should "return 0" in {
-    assert(taxCalc.calculateTax(0, Array(1000, 10000, 20000), Array(10,0.2,0.25)) == 0)
+    assert(taxCalc.calculateTax(0, Array(1000, 10000, 20000), Array(0.1,0.2,0.25)) == 0)
   }
 
   "Inputting 0 as income with second set of test arrays" should "return 0" in {

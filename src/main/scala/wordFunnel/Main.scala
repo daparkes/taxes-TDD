@@ -3,5 +3,6 @@ package wordFunnel
 import scala.io.Source
 
 object Main extends App {
-  println(funnelWord.funnelWord("princesses"))
+  val funnel = new FunnelWord
+  println(funnel.findFunnelList("princesses"))
 }
